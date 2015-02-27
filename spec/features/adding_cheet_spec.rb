@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature "User can add a cheet" do
+feature "listing all cheets" do
 
   before(:each) {
     Cheet.create(:text => "My first cheet")

@@ -3,3 +3,9 @@
     <li><%= cheet.text %></li>
   <% end %>
 </ul>
+
+<div id="new-cheet">
+  <form action="/cheets" method="post">
+    Cheet: <input type="text" name="text">
+    <input type="submit" value="Add cheet">
+</div>
