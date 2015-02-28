@@ -1,11 +1,29 @@
-<ul>
-  <% @cheets.each do |cheet| %>
-    <li><%= cheet.text %></li>
-  <% end %>
-</ul>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <h1>CHITTER</h1>
+    <div id="new-cheet">
+      <form action="/cheets" method="post" id="first">
+        Cheet: <input type="text" name="text">
+      <input type="submit" value="Add cheet" id="button">
+    </form>
+    </div>
+    <form action="/sessions/new" method="get" id="first">
+      Sign In
+      <input type="submit" value="Sign In" id="button">
+    </form>
+    <ul>
+      <% @cheets.each do |cheet| %>
+        <li><%= cheet.text %> Date: <%= cheet.time %></li>
+      <% end %>
+    </ul>
+  </body>
+</html>
 
-<div id="new-cheet">
-  <form action="/cheets" method="post">
-    Cheet: <input type="text" name="text">
-    <input type="submit" value="Add cheet">
-</div>
+
+
+
+

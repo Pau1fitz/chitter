@@ -4,5 +4,6 @@ class Cheet
 
   property :id, Serial
   property :text, String
+  property :time, Date
 
 end

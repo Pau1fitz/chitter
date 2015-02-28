@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'data_mapper'
 require 'rack-flash'
+require 'time'
 
 env = ENV['RACK_ENV'] || 'development'
 
@@ -12,6 +13,8 @@ require './lib/cheet'
 DataMapper.finalize
 
 class Chitter < Sinatra::Base
+
+  set :public_folder, Proc.new { File.join(root, '..', "public") }
 
   enable :sessions
   set :session_secret, 'super secret'
@@ -25,7 +28,7 @@ class Chitter < Sinatra::Base
 
   post('/cheets') do
     text = params["text"]
-    Cheet.create(:text=> text)
+    Cheet.create(:text=> text, :time => Time.now)
     redirect to('/')
   end
 
