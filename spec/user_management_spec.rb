@@ -44,6 +44,22 @@ feature 'user signs up' do
       expect(page).not_to have_content("Welcome, Paul")
     end
 
+    feature 'User signs out' do
+      before(:each) do
+        User.create(:name => "Paul",
+                  :password => "paul",
+                  :password_confirmation => "paul",
+                  :username => "paulychops",
+                  :email => 'paul@example.com')
+      end
+        scenario 'while being signed in' do
+          sign_in('paul@example.com', 'paul')
+          click_button("Sign out")
+          expect(page).to have_content("Good bye!")
+          expect(page).not_to have_content("Welcome, Paul")
+        end
+    end
+
     def sign_in(email, password)
       visit('/sessions/new')
       fill_in 'email', :with => email

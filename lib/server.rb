@@ -16,6 +16,7 @@ class Chitter < Sinatra::Base
   enable :sessions
   set :session_secret, 'super secret'
   use Rack::Flash
+  use Rack::MethodOverride
 
   get '/' do
     @cheets = Cheet.all
@@ -50,6 +51,11 @@ end
 
   get '/sessions/new' do
     erb :"sessions/new"
+  end
+
+   delete '/sessions' do
+    session.clear
+    flash[:notice] = "Good bye!"
   end
 
  post '/sessions' do
