@@ -2,24 +2,22 @@
   <head>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href='http://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <h1>CHITTER</h1>
     <div id="new-cheet">
       <form action="/cheets" method="post" id="first">
-        Cheet: <input type="text" name="text">
-      <input type="submit" value="Add cheet" id="button">
+        <textarea type="text" id="text-box" name="text" placeholder="Cheet..." rows="5" cols="40"></textarea>
+      <input type="submit" value="Add cheet" id="button2">
     </form>
     </div>
-    <form action="/sessions/new" method="get" id="first">
-      Sign In
-      <input type="submit" value="Sign In" id="button">
-    </form>
+    <div id="cheet-box">
     <ul>
       <% @cheets.each do |cheet| %>
-        <li><%= cheet.text %> Date: <%= cheet.time %></li>
+        <li><%= cheet.time %>       <%= cheet.text %> </li>
       <% end %>
     </ul>
+    </div>
   </body>
 </html>
 

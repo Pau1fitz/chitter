@@ -1,24 +1,103 @@
-body{
-  /*background-image: url("http://camunitygroup.resonancebiofeedback.com/wp-content/themes/nobb/resources/skins/Nobb-Skin-Curved-Image-Background-01/background-clouds-and-light69.jpg");*/
+html, body {
+margin: 0;
+padding: 0;
 }
 
-h1{
+body{
+  background-color:white;
+}
+
+header {
+  min-width:100%;
+  background-color: black;
+  color: white;
+  display: inline-block;
+  height: 60px;
+  }
+
+header #logo {
+  margin: auto 0;
+  display: flex;
   font-family: 'Chewy', cursive;
+  font-size: 32px;
+  left: 20px;
+  position: relative;
+}
+
+header #welcome-message{
+  font-family: 'Chewy', cursive;
+  float: right;
+  position: relative;
+  bottom: 50px;
+  right: 20px;
+}
+
+#button1
+{
+  border-radius: 100px;
+  font-family: 'Chewy', cursive;
+  color: white;
+  background-color: black;
+  font-size:15px;
+  float: right;
+  position: relative;
+  bottom: 25px;
+  left: 80px;
+}
+
+#button1:hover
+{
+  background-color: silver;
+}
+
+#button2
+{
+  border-radius: 100px;
+  font-family: 'Chewy', cursive;
+  color: white;
+  background-color: black;
+  font-size:12px;
+  position: relative;
+}
+
+#button2:hover
+{
+  background-color: silver;
+}
+
+#cheet-box{
+  position: relative;
+  left: 500px;
+  bottom: 70px;
+}
+
+#new-cheet{
+  position: relative;
+  top: 20px;
+  left: 20px;
+  font-family: 'Arvo', serif;
+}
+
+#text-box{
+  font-family: 'Arvo', serif;
 }
 
 li{
-  font-family: 'Chewy', cursive;
+  font-family: 'Arvo', serif;
+  color: #0F2B33;
+  list-style-type: none;
 }
 
 #first{
-  font-family: 'Chewy', cursive;
+  font-family: 'Arvo', serif;
+  color: #0F2B33;
 }
 
-#button{
-  font-family: 'Chewy', cursive;
-  background-color: white;
+#second{
+  font-family: 'Arvo', serif;
+  color: #0F2B33;
 }
 
-#new{
-   background-image: url("http://wallpoper.com/images/00/26/74/04/blurred_00267404.jpg");
- }
+
+
+
