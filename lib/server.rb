@@ -11,6 +11,7 @@ require './lib/user'
 require './lib/cheet'
 
 DataMapper.finalize
+DataMapper.auto_upgrade!
 
 class Chitter < Sinatra::Base
 

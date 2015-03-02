@@ -12,9 +12,10 @@
     </form>
     </div>
     <div id="cheet-box">
+      <h1>Cheets</h1>
     <ul>
       <% @cheets.each do |cheet| %>
-        <li><%= cheet.time %>       <%= cheet.text %> </li>
+        <li><%= cheet.time %> <%= cheet.text %></li>
       <% end %>
     </ul>
     </div>

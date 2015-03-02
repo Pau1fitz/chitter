@@ -24,6 +24,13 @@ header #logo {
   position: relative;
 }
 
+h1{
+  position: relative;
+  font-family: 'Chewy', cursive;
+  font-size: 32px;
+  left: 35px;
+}
+
 header #welcome-message{
   font-family: 'Chewy', cursive;
   float: right;
@@ -86,6 +93,7 @@ li{
   font-family: 'Arvo', serif;
   color: #0F2B33;
   list-style-type: none;
+  line-height: 200%;
 }
 
 #first{
